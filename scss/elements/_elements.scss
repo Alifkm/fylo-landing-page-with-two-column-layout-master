@@ -1,0 +1,54 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-raleway;
+}
+
+img {
+  width: 100%;
+}
+
+ul, li {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $very-dark-blue;
+}
+
+input {
+  border: 1px solid $very-dark-blue;
+}
+
+button {
+  border: none;
+}
+
+header {
+  @include flexProperty(row, nowrap, space-between, center);
+  padding: 1.5em 0;
+  margin-bottom: 4em;
+}
+
+footer {
+  background-color: $very-dark-blue;
+  margin: 0;
+}
+
+@include media-md {
+  header {
+    padding-top: 2em;
+  }
+  
+}
+
+@include media-lg {
+  header {
+    padding-top: 2.5em;
+  } 
+}

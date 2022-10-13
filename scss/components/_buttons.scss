@@ -1,0 +1,10 @@
+/* --------------------------------- */
+/* Button component */
+/* --------------------------------- */
+
+.button {
+  @extend .input;
+  background-color: $bright-blue;
+  color: #FFF;
+  font-family: $font-open-sans;
+}

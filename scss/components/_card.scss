@@ -1,0 +1,57 @@
+/* --------------------------------- */
+/* Card component */
+/* --------------------------------- */
+
+.card {
+  width: 80%;
+  max-width: 300px;
+  padding: 1.5em 2em;
+  background-color: #FFF;
+  margin-inline: auto;
+  border-radius: 4px;
+  font-size: 0.67rem;
+  box-shadow: 0 0 3px #333;
+
+  #{&}__paragraph {
+    @include flexProperty(column, wrap, start, start);
+    color: $very-dark-blue;
+    line-height: 1.5;
+    font-family: $font-open-sans;
+    padding-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #{&}__paragraph::before {
+    content: "\201C";
+    font-size: 2.5rem;
+    color: $very-dark-blue;
+    line-height: 0.1;
+    font-family: sans-serif;
+  }
+}
+
+.profile-wrapper {
+  @include flexProperty(row, nowrap, start, center);
+
+  #{&}__image {
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+  }
+
+  #{&}__name {
+    margin-left: 1em;
+    font-weight: weight("bold");
+
+    & span {
+      font-size: 0.5rem;
+      font-weight: weight("regular");
+    }
+  }
+}
+
+@include media-lg {
+  .card {
+    margin-inline-start: 0;
+  }
+}
