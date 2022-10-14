@@ -42,38 +42,3 @@
 @import "components/card";
 @import "components/buttons";
 @import "components/inputs";
-
-
-// ----------------------------------
-// Trumps
-// ----------------------------------
-
-
-
-// header {
-//   @include flexProperty(space-between, null);
-//   padding: 1em;
-
-//   a {
-//     // background-color: wheat;
-//     width: 40%;
-//     @include flexProperty(left, center);
-//     img {
-//       width: 100px;
-//     }
-//   }
-
-//   nav {
-//     background-color: lightblue;
-//     width: 55%;
-
-//     ul {
-//       @include flexProperty(left, center);
-//       .nav-items {
-//         padding: 0;
-//         list-style-type: none;
-//       }
-//     }
-
-//   }
-// }

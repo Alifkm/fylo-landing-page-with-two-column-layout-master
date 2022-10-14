@@ -39,8 +39,11 @@
           Access them wherever you need, share and collaborate with friends, 
           family, and co-workers.</p>
         <div class="first-section__form-wrapper">
-          <input class="first-section__input" type="text" id="email" placeholder="Enter your email">
-          <button class="first-section__button">Get Started</button>
+          <div class="first-section__form-input">
+            <input class="form-input" type="text" id="first-section-email" placeholder="Enter your email">
+            <p class="error-message"></p>
+          </div>
+          <button type="submit" id="first-section-button" class="first-section__button">Get Started</button>
         </div>
       </div>
     </section>
@@ -82,8 +85,11 @@
         If you have any questions, our support team would be happy to help you.</p>
       </div>
       <div class="third-section__form-wrapper">
-        <input type="text" id="email" placeholder="email@example.com" class="third-section__input">
-        <button class="third-section__button">Get Started For Free</button>
+        <div class="third-section__form-input">
+          <input type="text" id="third-section-email" placeholder="email@example.com" class="form-input">
+          <p class="error-message"></p>
+        </div>
+        <button type="button" id="third-section-button" class="third-section__button">Get Started For Free</button>
       </div>
      </div>
     </section>
@@ -118,9 +124,11 @@
       </div>  
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="https://www.frontendmentor.io/profile/Alifkm">Alif Kahfi</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/Alifkm" target="_blank">Alif Kahfi</a>.
       </p>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

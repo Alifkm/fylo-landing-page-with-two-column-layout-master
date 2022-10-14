@@ -13,6 +13,18 @@
   }
 }
 
+.error-input {
+  border: 2px solid $light-red;
+}
+
+.error-message-active {
+  margin-top: 0.3em;
+  color: $light-red;
+  font-size: 0.75em;
+  font-style: italic;
+  align-self: flex-start;
+}
+
 /* --------------------------------- */
 /* first section */
 /* --------------------------------- */
@@ -41,14 +53,20 @@
     margin-bottom: 2em;
   }
 
-  #{&}__input {
-    @extend .input;
-  }
-
   #{&}__form-wrapper {
-    @include flexProperty(column, nowrap, center, center); 
+    @include flexProperty(column, nowrap, center, center);
   }
   
+  #{&}__form-input {
+    @include flexProperty(column, nowrap, center, center);
+    @include width(90%, 400px);
+    
+    .form-input {
+      width: 100%;
+      @extend .input;
+    }
+  }
+
   #{&}__button {
     @extend .button;
     margin-top: 1em;
@@ -56,7 +74,7 @@
 
     &:hover {
       cursor: pointer;
-      background-color: $noderate-cyan;
+      filter: brightness(150%);
     }
   }
 
@@ -102,8 +120,7 @@
     
     &:hover {
       cursor: pointer;
-      color: $bright-blue;
-      transform: scale(1.1);
+      filter: brightness(140%);
     }
   }
 
@@ -170,10 +187,21 @@
     margin-bottom: 1em;
   }
 
+  
   #{&}__input {
     @extend .input;
   }
   
+  #{&}__form-input {
+    @include flexProperty(column, nowrap, center, center);
+    @include width(80%, 400px);
+
+    .form-input {
+      width: 100%;
+      @extend .input;
+    }
+  }
+
   #{&}__button {
     @extend .button;
     margin-top: 1em;
@@ -182,7 +210,7 @@
 
     &:hover {
       cursor: pointer;
-      background-color: $noderate-cyan;
+      filter: brightness(150%);
     }
   }
 
@@ -226,11 +254,15 @@
 
 .footer-menu__links, .footer-menu__links-socmed {
   transition: 0.2s;
-    
+  
   &:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    color: #4574f9;
   }
+
+  & .fa-brands:hover {
+    border: 1px solid #4574f9;
+    }
 }
 
 .footer-menu__icon {
@@ -292,18 +324,21 @@
     #{&}__title {
       font-size: 2.25rem;
     }
+    
     #{&}__form-wrapper {
-      @include flexProperty(row, wrap, flex-start, center);
-      // background-color: lightblue;
+      @include flexProperty(row, nowrap, space-between flex-start);
     }
-  
-    #{&}__input {
+
+    #{&}__form-input {
+      @include flexProperty(column, nowrap, center, center);
       width: 60%;
     }
+  
     
     #{&}__button {
       margin-top: 0;
       width: 35%;
+      align-self: flex-start
     }
   }
 
